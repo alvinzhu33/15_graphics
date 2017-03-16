@@ -1,10 +1,19 @@
 import math
 
-def make_bezier():
-    pass
+def transpose(old):
+    new = [[0.0,0.0,0.0,0.0], [0.0,0.0,0.0,0.0], [0.0,0.0,0.0,0.], [0.,0.,0.,0.]];
+    for r in range(4):
+        for c in range(4):
+            new[r][c] = old[c][r];
+    return new;
 
 def make_hermite():
-    pass
+    t = [[2, -2, 1, 1], [-3, 3, -2, -1], [0, 0, 0, 1], [1, 0, 0, 0]];
+    return transpose(t);
+
+def make_bezier():
+    t = [[-1, 3, -3, 1], [3, -6, -3, 0], [-3, 3, 0, 0], [1, 0, 0, 0]];
+    print_matrix(transpose(t));
 
 def generate_curve_coefs( p1, p2, p3, p4, t ):
     pass

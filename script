@@ -8,4 +8,5 @@ circle
 175 325 0 10
 circle
 325 325 0 10
-display
+hermite
+bezier
