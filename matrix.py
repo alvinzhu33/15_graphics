@@ -17,8 +17,8 @@ def make_bezier():
 
 def generate_curve_coefs( p1, p2, p3, p4, t ):
     #hermite
-    tt = t*t;
-    ttt = t*t*t;
+    tt = t**2;
+    ttt = t**3;
     (2*ttt - 3*tt + 1)p1 + (-2*ttt + 3*tt)p2 + (ttt - 2*tt + t)p3 + (ttt - tt)p4
 
     (-p1 + 3*p2 - 3*p3 + p4)ttt + (3*p1 - 6*p2 + 3*p3)tt + (-3*p1 + 3*p2)t + p1
