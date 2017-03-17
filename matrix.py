@@ -16,7 +16,13 @@ def make_bezier():
     return transpose(t);
 
 def generate_curve_coefs( p1, p2, p3, p4, t ):
-    pass
+    #hermite
+    tt = t*t;
+    ttt = t*t*t;
+    (2*ttt - 3*tt + 1)p1 + (-2*ttt + 3*tt)p2 + (ttt - 2*tt + t)p3 + (ttt - tt)p4
+
+    (-p1 + 3*p2 - 3*p3 + p4)ttt + (3*p1 - 6*p2 + 3*p3)tt + (-3*p1 + 3*p2)t + p1
+    
 
 
 def make_translate( x, y, z ):
